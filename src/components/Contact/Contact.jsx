@@ -10,9 +10,9 @@ import styles from './Contact.module.css'
 //    Set "To Email" in the template to ameymvaidya@gmail.com
 // 4. Copy your Public Key from Account → API Keys
 // Replace the three placeholders below:
-const EMAILJS_SERVICE_ID  = 'service_0kkhn2k'
-const EMAILJS_TEMPLATE_ID = 'template_sxu0qm4'
-const EMAILJS_PUBLIC_KEY  = 'V8_KxyBEc5LI3WCmq'
+const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 // ────────────────────────────────────────────────────────────────
 
 const offices = [
