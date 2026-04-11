@@ -1,4 +1,4 @@
-# ML Platform Landing Page
+# ML Platform Landing Page - PyrunAI
 
 A modern, animated landing page for an ML platform built with React + Vite. Features a scroll-driven canvas animation, dark/light theme toggle, and a working contact form via EmailJS.
 
