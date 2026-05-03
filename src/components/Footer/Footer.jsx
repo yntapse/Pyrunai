@@ -8,41 +8,22 @@ export default function Footer() {
         {/* Brand */}
         <div className={styles.brand}>
           <div className={styles.logo}>
-            <img src="/logo.svg" alt="PyrunAI" className={styles.logoImg} />
+            <img src="/FullLogo.PNG" alt="PyrunAI" className={styles.logoImg} />
           </div>
           <p className={styles.tagline}>
-            Smart services. Balanced lives.<br />
-            Building intelligent solutions that<br />
-            drive business optimization.
+            Smart services. Balanced lives.
           </p>
-          <a href="https://linkedin.com" className={styles.linkedin} target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/company/pyrunai-services/"
+            className={styles.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
             Follow us on LinkedIn
           </a>
-        </div>
-
-        {/* Company */}
-        <div className={styles.col}>
-          <h4 className={styles.colHead}>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Case Studies</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        {/* Services */}
-        <div className={styles.col}>
-          <h4 className={styles.colHead}>Services</h4>
-          <ul>
-            <li><a href="#">AI &amp; Machine Learning</a></li>
-            <li><a href="#">Data Analytics</a></li>
-            <li><a href="#">Web/App Development</a></li>
-            <li><a href="#">Power BI Solutions</a></li>
-          </ul>
         </div>
 
         {/* Contact */}
@@ -59,9 +40,23 @@ export default function Footer() {
             </li>
             <li>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Nashik, India · New York, USA · Dublin, Ireland
+              Nashik, India · Dublin, Ireland
             </li>
           </ul>
+
+          <a
+            href="https://www.pyrunai.com"
+            className={styles.servicesLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            For Services: www.pyrunai.com
+          </a>
         </div>
 
       </div>

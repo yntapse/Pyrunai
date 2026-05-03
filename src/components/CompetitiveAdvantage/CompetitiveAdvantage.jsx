@@ -1,7 +1,7 @@
 import { useReveal } from '../../hooks/useReveal'
 import styles from './CompetitiveAdvantage.module.css'
 
-const competitors = ['DataRobot', 'H2O.ai', 'Vertex AI', 'SageMaker', 'Open source', 'Your tool']
+const competitors = ['DataRobot', 'H2O.ai', 'Vertex AI', 'SageMaker', 'Open source', 'Our Tool']
 
 const rows = [
   {
@@ -86,10 +86,10 @@ export default function CompetitiveAdvantage() {
               <tr>
                 <th className={styles.featureHead}>Feature</th>
                 {competitors.map((c, i) => {
-                  const isYours = c === 'Your tool'
+                  const isYours = c === 'Our Tool'
                   return (
                     <th key={i} className={`${styles.compHead} ${isYours ? styles.yourHead : ''}`}>
-                      {c}
+                      {c === 'Our Tool' ? <strong>{c}</strong> : c}
                     </th>
                   )
                 })}
@@ -100,7 +100,7 @@ export default function CompetitiveAdvantage() {
                 <tr key={ri} className={ri % 2 === 0 ? styles.rowEven : styles.rowOdd}>
                   <td className={styles.featureCell}>{row.feature}</td>
                   {row.values.map((val, ci) => (
-                    <Cell key={ci} value={val} isYours={competitors[ci] === 'Your tool'} />
+                    <Cell key={ci} value={val} isYours={competitors[ci] === 'Our Tool'} />
                   ))}
                 </tr>
               ))}

@@ -26,9 +26,10 @@
 }
 
 .logoImg {
-  height: 52px;
+  height: 48px;
   width: auto;
   display: block;
+  object-fit: contain;
 }
 
 .links {
@@ -44,14 +45,36 @@
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--grad-blue-green);
+  border-radius: 2px;
+  transition: width 0.25s ease;
 }
 
 .links a:hover {
   color: var(--text);
 }
 
+.links a:hover::after {
+  width: 100%;
+}
+
 .activeLink {
   color: var(--text) !important;
+}
+
+.activeLink::after {
+  width: 100% !important;
 }
 
 .cta {

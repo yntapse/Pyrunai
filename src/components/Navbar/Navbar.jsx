@@ -32,7 +32,7 @@ function MoonIcon() {
 }
 
 const links = [
-  { label: 'Solution',  id: 'solution' },
+  { label: 'Platform',  id: 'solution' },
 ]
 
 function scrollTo(id) {
@@ -94,7 +94,7 @@ export default function Navbar() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <a href="#hero" className={styles.logo} onClick={e => handleNav(e, 'hero')}>
-        <img src="/logo.svg" alt="PyrunAI" className={styles.logoImg} />
+        <img src="/FullLogo.PNG" alt="PyrunAI" className={styles.logoImg} />
       </a>
 
       <ul className={styles.links}>
