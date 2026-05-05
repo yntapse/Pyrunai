@@ -59,3 +59,16 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 48px rgba(37, 99, 235, 0.45);
 }
+
+@media (max-width: 768px) {
+  .section { padding: 7rem 1.5rem; }
+  .sub { font-size: 1rem; }
+  .cta { padding: 0.9rem 2.25rem; font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 6rem 1.25rem; }
+  .heading { font-size: clamp(2rem, 8vw, 3rem); }
+  .sub { font-size: 0.95rem; margin-bottom: 2rem; }
+  .cta { padding: 0.85rem 2rem; font-size: 0.95rem; width: 100%; text-align: center; }
+}

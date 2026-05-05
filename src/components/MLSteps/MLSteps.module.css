@@ -149,7 +149,19 @@
 
 @media (max-width: 900px) {
   .track { flex-direction: column; height: auto; }
-  .box { flex: none; opacity: 0.65; }
+  .box { flex: none; opacity: 0.65; width: 100%; }
   .boxActive { flex: none; opacity: 1; }
   .boxActive .descWrap { max-height: 200px; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 5rem 1.25rem; }
+  .header { margin-bottom: 2.5rem; }
+  .track { gap: 8px; }
+  .box { padding: 0.85rem 1rem; border-radius: 12px; }
+  .boxActive { padding: 1.25rem 1rem; }
+  .title { font-size: 0.82rem; }
+  .boxActive .title { font-size: 0.95rem; }
+  .desc { font-size: 0.82rem; }
+  .boxActive .descWrap { max-height: 160px; }
 }

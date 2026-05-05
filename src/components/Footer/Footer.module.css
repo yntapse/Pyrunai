@@ -124,11 +124,13 @@
 .bottomTagline { color: var(--text-faint); }
 
 @media (max-width: 768px) {
-  .inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem 2.5rem; }
 }
 
 @media (max-width: 540px) {
-  .inner { padding: 3rem 1.5rem 2rem; }
-  .bottom { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.25rem 1.5rem; }
+  .inner { padding: 2.5rem 1.25rem 2rem; gap: 2rem; }
+  .bottom { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1.25rem 1.25rem; }
   .bottomTagline { display: none; }
+  .logoImg { height: 42px; }
+  .servicesLink { font-size: 0.78rem; }
 }

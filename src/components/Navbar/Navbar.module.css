@@ -138,8 +138,14 @@
   background: var(--bg-3);
 }
 
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .scrolled { padding: 0.75rem 1.5rem; }
+}
+
 @media (max-width: 640px) {
-  .nav { padding: 1rem 1.25rem; }
-  .scrolled { padding: 0.75rem 1.25rem; }
+  .nav { padding: 0.85rem 1.25rem; }
+  .scrolled { padding: 0.65rem 1.25rem; }
   .links { display: none; }
+  .logoImg { height: 38px; }
 }

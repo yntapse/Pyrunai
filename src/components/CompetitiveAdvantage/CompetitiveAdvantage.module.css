@@ -134,7 +134,17 @@
 
 @media (max-width: 768px) {
   .section { padding: 6rem 1rem; }
-  .table { font-size: 0.78rem; min-width: 620px; }
+  .table { font-size: 0.78rem; min-width: 580px; }
   .featureCell { padding: 0.85rem 1rem; }
   .cell { padding: 0.85rem 0.5rem; }
+  .featureHead { padding: 1rem 1rem; font-size: 0.78rem; }
+  .compHead { padding: 1rem 0.5rem; font-size: 0.72rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 5rem 0.75rem; }
+  .table { font-size: 0.72rem; min-width: 520px; }
+  .featureCell { padding: 0.75rem 0.75rem; font-size: 0.72rem; }
+  .cell { padding: 0.75rem 0.4rem; }
+  .note { font-size: 0.62rem; }
 }

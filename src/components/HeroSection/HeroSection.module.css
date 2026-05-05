@@ -369,6 +369,10 @@
   50%       { opacity: 1;   transform: scaleY(1.2); }
 }
 
+@media (max-width: 1024px) {
+  .panel { width: 38vw; padding: 2.5rem 2rem; }
+}
+
 @media (max-width: 768px) {
   .featureInner { padding: 2rem 1.5rem 1.5rem; }
   .featureList { grid-template-columns: 1fr; }
@@ -379,11 +383,14 @@
   .panelTitle { font-size: 1.1rem; }
 }
 
-@media (max-width: 1024px) {
-  .panel { width: 38vw; padding: 2.5rem 2rem; }
-}
-
 @media (max-width: 500px) {
+  /* Hide side panels entirely on small phones — centre content takes full focus */
+  .panel { display: none; }
   .featureInner { padding: 1.5rem 1.25rem 1.25rem; max-width: 100%; }
-  .panel { width: 48vw; padding: 1.5rem 1rem; }
+  .featureCard { padding: 1rem; }
+  .content { padding: 1.25rem; }
+  .title { font-size: clamp(2rem, 10vw, 3rem); }
+  .subtitle { font-size: 0.9rem; margin-bottom: 2rem; }
+  .badge { margin-bottom: 1.25rem; }
+  .scrollHint { bottom: 1.25rem; }
 }
