@@ -36,21 +36,53 @@ const PinIcon = () => (
 export default function Contact() {
   const formRef = useRef(null)
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [errorText, setErrorText] = useState('')
 
   async function handleSubmit(e) {
     e.preventDefault()
+    setErrorText('')
+
+    const formEl = formRef.current
+    if (!formEl) {
+      setStatus('error')
+      setErrorText('Form is not ready. Please refresh and try again.')
+      return
+    }
+
+    if (!formEl.checkValidity()) {
+      formEl.reportValidity()
+      return
+    }
+
+    const hasEmailJsConfig =
+      Boolean(EMAILJS_SERVICE_ID?.trim()) &&
+      Boolean(EMAILJS_TEMPLATE_ID?.trim()) &&
+      Boolean(EMAILJS_PUBLIC_KEY?.trim())
+
+    if (!hasEmailJsConfig) {
+      setStatus('error')
+      setErrorText('Email service is not configured. Add EmailJS variables in your environment and redeploy.')
+      return
+    }
+
     setStatus('sending')
     try {
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        formEl,
         EMAILJS_PUBLIC_KEY
       )
       setStatus('success')
-      formRef.current.reset()
-    } catch {
+      formEl.reset()
+    } catch (error) {
+      console.error('EmailJS submit failed:', error)
+      const reason =
+        typeof error?.text === 'string' && error.text.trim().length > 0
+          ? error.text
+          : 'Please try again in a moment.'
       setStatus('error')
+      setErrorText(`Message could not be sent. ${reason}`)
     }
   }
 
@@ -133,7 +165,7 @@ export default function Contact() {
             )}
             {status === 'error' && (
               <p className={styles.errorMsg}>
-                Something went wrong. Please try again or email us directly.
+                {errorText || 'Something went wrong. Please try again or email us directly.'}
               </p>
             )}
           </form>

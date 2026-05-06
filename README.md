@@ -26,6 +26,10 @@ VITE_EMAILJS_TEMPLATE_ID=your_template_id
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
+You can copy from `.env.example` and fill in real values.
+
+For Vercel deployments, add the same three variables in Project Settings -> Environment Variables, then redeploy.
+
 Sign up at [emailjs.com](https://www.emailjs.com) to get these values. Your template should include the variables `{{from_name}}`, `{{from_email}}`, `{{company}}`, and `{{message}}`.
 
 ## Scripts
